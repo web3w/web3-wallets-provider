@@ -1,0 +1,43 @@
+{
+  "name": "web3-wallets-provider",
+  "version": "1.0.0",
+  "description": "Javascript SDK for Web3 wallets ",
+  "main": "lib/index.js",
+  "type": "lib/index.d.ts",
+  "bin": {
+    "wallets-cli": "./bin/ele-cli.js"
+  },
+  "author": "Project Developers",
+  "scripts": {
+    "release": "tsc && npm publish",
+    "dev:tsc": "tsc -w -p tsconfig.json",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
+    "build:node": "webpack -c config/webpack.node.config.js",
+    "build:web": "webpack -c config/webpack.config.js",
+    "start": "webpack --watch",
+    "dev": "webpack serve --open -c config/webpack.config.js",
+    "link": "sudo npm link web3-wallets-provider"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "@fastify/helmet": "^8.1.0",
+    "assert": "^2.0.0",
+    "bignumber.js": "^9.0.1",
+    "commander": "^9.3.0",
+    "ethers": "^5.6.8",
+    "fastify": "^3.29.0",
+    "inquirer": "^8.2.4",
+    "web3-signer-provider": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.6",
+    "ts-loader": "^5.3.3",
+    "ts-node": "~10.7.0",
+    "typescript": "~4.6.4",
+    "web3": "^1.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "watch": "webpack --watch"
+}
