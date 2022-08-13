@@ -29,9 +29,6 @@ export interface ProviderConnectInfo {
 
 export type  ProviderAccounts = string[];
 
-export interface EIP1102Request extends RequestArguments {
-    method: "eth_requestAccounts";
-}
 
 export interface SimpleEventEmitter {
     // add listener
@@ -70,10 +67,6 @@ export interface EIP1193Provider extends SimpleEventEmitter {
     request(args: RequestArguments): Promise<unknown>;
 }
 
-export interface IEthereumProvider extends EIP1193Provider {
-    // legacy alias for EIP-1102
-    enable(): Promise<ProviderAccounts>;
-}
 
 
 export interface ChainConfig {

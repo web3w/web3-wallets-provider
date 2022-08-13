@@ -1,1 +1,1 @@
-export {Web3WalletsPovider} from './src/index'
+export {Web3WalletsProvider} from './src/index'

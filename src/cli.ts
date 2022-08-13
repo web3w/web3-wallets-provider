@@ -3,9 +3,7 @@
 import commander, {program} from 'commander';
 import * as fs from "fs";
 import {networkPrompt} from "./propmt";
-import {Web3WalletsPovider} from "./index";
-import {CHAIN_NAME, CHAIN_NAME_ID} from "./constants/chain";
-import {privateKeyToAddress} from "./connectors/walletsPovider";
+
 
 const path = require('path');
 const dirPath = process.cwd()
